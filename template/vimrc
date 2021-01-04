@@ -1,0 +1,13 @@
+filetype on
+filetype indent on
+syntax enable
+syntax on
+autocmd BufNewFile *.cpp :0r ~/.vim/cpp 
+autocmd BufNewFile *.cpp :w!
+map <F7> :!g++ -std=c++11 -DDEBUG % && ./a.out <CR>
+map <F8> :!g++ -std=c++11  % && ./a.out <CR>
+map <F5> :!g++ -g % <CR>
+map <F2> :w <CR>
+map <F12> :!gdb ./a.out <CR>
+set number
+set tabstop=4
